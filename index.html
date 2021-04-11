@@ -1,0 +1,124 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgb(240, 240, 240);
+    }
+
+    .navigation_check {
+      display: none;
+    }
+
+    .nav-label {
+      height: 4rem;
+      width: 4rem;
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      border-radius: 50%;
+      background-color: white;
+      z-index: 200;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-back {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      background-color: red;
+      position: fixed;
+      top: 2.5rem;
+      right: 2.5rem;
+      /* transform: scale(80); */
+      transition: all 1.5s;
+    }
+
+    .nav-menu {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: none;
+    }
+
+    .nav-list {
+      list-style-type: none;
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      /* transform: translate(-50%, -50%); */
+    }
+
+    .nav-item {
+      margin: 1rem;
+    }
+
+    .nav-link {
+      font-size: 2rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 300;
+      width: 300px;
+      display: inline-block;
+      text-align: center;
+      padding: 15px;
+      background-image: linear-gradient(120deg, transparent 50%, white 50%);
+      background-size: 250%;
+      transition: all 1.5s;
+    }
+
+    .nav-link:hover {
+      background-position: 100%;
+      color: black;
+    }
+
+    .navigation_check:checked~.nav-back {
+      transform: scale(80);
+    }
+
+    .navigation_check:checked~.nav-menu {
+      display: block;
+    }
+
+    svg {
+      margin: 10px 10px 10px 10px;
+      height: 70%;
+      width: 70%;
+    }
+  </style>
+</head>
+ 
+<body>
+  <div class="navaigation">
+    <input type="checkbox" id="nav-check" class="navigation_check" />
+    <label for="nav-check" class="nav-label">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+        fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+      </svg>
+      
+    </label>
+    <div class="nav-back"></div>
+    <nav class="nav-menu">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="" class="nav-link"> Home</a></li>
+        <li class="nav-item"><a href="" class="nav-link"> about</a></li>
+        <li class="nav-item"><a href="" class="nav-link"> Contact</a></li>
+        <li class="nav-item"><a href="" class="nav-link"> Gallary</a></li>
+      </ul>
+    </nav>
+  </div>
+</body>
+
+</html>
